@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>H2School_ForumDB_Web</RootNamespace>
+  </PropertyGroup>
+
+</Project>
