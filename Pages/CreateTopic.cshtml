@@ -1,0 +1,46 @@
+﻿@page
+@model H2School_ForumDB_Web.Pages.CreateTopicModel
+@{
+
+}
+
+<h1>Create</h1>
+
+<h4>To Do</h4>
+<hr />
+<div class="text-center">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Topic.HeadLine" class="control-label"></label>
+                    <input asp-for="Topic.HeadLine" class="form-control" />
+                    <span asp-validation-for="Topic.HeadLine" class="text-danger"></span>
+                    <label asp-for="Topic.BodyText" class="control-label"></label>
+                    <input asp-for="Topic.BodyText" class="form-control" />
+                    <span asp-validation-for="Topic.BodyText" class="text-danger"></span>
+                    <label asp-for="Topic.UserID" class="control-label"></label>
+                    <input asp-for="Topic.UserID" class="form-control" />
+                    <span asp-validation-for="Topic.UserID" class="text-danger"></span>
+                    <label asp-for="Topic.CategoryID" class="control-label"></label>
+                    <p>1. Culinary 2. Recipe 3. Review</p>
+                    <input asp-for="Topic.CategoryID" class="form-control" />
+                    <span asp-validation-for="Topic.CategoryID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-dark" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

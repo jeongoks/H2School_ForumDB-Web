@@ -13,14 +13,14 @@ namespace H2School_ForumDB_Web.Data
         public static IConfigurationRoot Configuration { get; private set; }
         static string connectionString;
 
-        public static void ConnectionSQL()
+        public static string ConnectionSQL()
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
             Configuration = builder.Build();
 
-            connectionString = Configuration.GetConnectionString("DefaultConnection");
+            return connectionString = Configuration.GetConnectionString("DefaultConnection");
         }
     }
 }

@@ -1,0 +1,43 @@
+﻿@page "{id}"
+@model H2School_ForumDB_Web.Pages.SingleTopicModel
+@{
+}
+
+<div class="text-center">
+    <h1>@Model.Topic.HeadLine</h1>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Head Line
+                            </th>
+                            <th>
+                                Body Text
+                            </th>
+                            <th>
+                                Create Time
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => model.Topic.HeadLine)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.Topic.BodyText)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.Topic.CreateTime)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

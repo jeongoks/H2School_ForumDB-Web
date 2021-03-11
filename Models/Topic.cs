@@ -8,8 +8,8 @@ namespace H2School_ForumDB_Web.Models
     public class Topic
     {
         public int TopicID { get; set; }
-        public Category CategoryID { get; set; }
-        public User UserID { get; set; }
+        public int CategoryID { get; set; }
+        public int UserID { get; set; }
         public string HeadLine { get; set; }
         public string BodyText { get; set; }
         public DateTime CreateTime { get; set; }
