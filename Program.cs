@@ -6,6 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.IO;
+using H2School_ForumDB_Web.Data;
 
 namespace H2School_ForumDB_Web
 {
@@ -13,6 +17,7 @@ namespace H2School_ForumDB_Web
     {
         public static void Main(string[] args)
         {
+            ConnectionConfig.ConnectionSQL();
             CreateHostBuilder(args).Build().Run();
         }
 
